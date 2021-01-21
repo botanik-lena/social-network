@@ -1,5 +1,5 @@
 .app-wrapper {
-  width: 1200px;
+  width: 1300px;
   margin: 0 auto;
   display: grid;
   grid-template-areas: "header header"
@@ -10,6 +10,6 @@
 }
 
 .app-wrapper-content {
-    grid-area: content;
-    background-color: bisque;
+  grid-area: content;
+  background-color: rgb(245, 245, 245);
 }
