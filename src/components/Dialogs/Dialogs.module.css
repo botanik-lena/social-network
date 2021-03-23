@@ -18,4 +18,24 @@
 
 .message {
     padding: 10px;
+    float: left;
+}
+
+.img {
+    width: 50px;
+    margin: 6px;
+    float: left;
+}
+
+.sendMessage {
+    text-align: center;
+}
+
+.containerWriteText {
+    text-align: center;
+}
+
+.writeText {
+    width: 600px;
+    height: 60px;
 }
