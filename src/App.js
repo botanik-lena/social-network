@@ -14,7 +14,7 @@ function App(props) {
         {/* <Route path="/dialogs" component={Dialogs} /> //1 способ через component, но так не передать props
           <Route path="/profile" component={Profile} /> */}
 
-        <Route path="/dialogs" render={() => <Dialogs state={props.state.dialogsPage} />} />
+        <Route path="/dialogs" render={() => <Dialogs store={props.store} />} />
         <Route path="/profile" render={() => <Profile state={props.state.profilePage} dispatch={props.dispatch} />} />
       </div>
     </div>
