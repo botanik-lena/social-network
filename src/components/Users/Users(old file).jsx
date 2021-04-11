@@ -1,22 +1,16 @@
-import React from "react";
 import styles from "./users.module.css";
+import * as axios from "axios";
 import userPhoto from "../../assets/images/avocado_avatar.png"
 
 let Users = (props) => {
 
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
-    let pages = [];
-    for (let i = 1; i <= pagesCount; i++) {
-        pages.push(i);
+    if (props.users.length === 0) {
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=&{this.props.pageSize}`)
+            .then(response => {
+                props.setUsers(response.data.items);
+            });
     }
-
     return <div>
-        <div>
-            {pages.map(p => {
-                return <span className={props.currentPage === p && styles.selectedPage} onClick={(e) => { props.onPageChanged(p) }}>{p}</span>
-            })}
-
-        </div>
         {
             props.users.map(user => <div key={user.id}>
                 <div>
